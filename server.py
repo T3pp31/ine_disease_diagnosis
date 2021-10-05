@@ -14,7 +14,7 @@ model = load_model('model1.h5')
 
 ine_list=[]
 with open('ine_list.txt') as f:
-	ine_list=[s.strip()for  in f.readlines()]
+	ine_list=[s.strip() for s in f.readlines()]
 
 print('== ine_list ==')
 print(ine_list)
