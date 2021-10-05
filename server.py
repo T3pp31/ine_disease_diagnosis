@@ -38,4 +38,15 @@ def upload_file():
 		print('result')
 		print(result)
 
-		
+		no1_ine=result[0,0]
+		no2_ine=result[1,0]
+
+		no1_ine_pred=result[0,1]
+		no2_ine_pred=result[1,1]
+
+		return render_template('index.html',filepath=filepath,
+		no1_ine=no1_ine,no2_ine=no2_ine,no1_ine_pred=no1_ine_pred,no2_ine_pred=no2_ine_pred)
+
+if __name__=='__main__':
+	app.debug=True
+	app.run(host='localhost',port=5000)
