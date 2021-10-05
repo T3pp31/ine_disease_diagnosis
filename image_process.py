@@ -2,7 +2,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 from tensorflow.keras.applications.inception_v3 import preprocess_input
 
-def examine_ine(image,model,cat_list):
+def examine_ine(image,model,ine_list):
 	img_array=img_to_array(image)
 	img_dims = np.expand_dims(img_array,axis=0)
 	preds=model.predict(preprocess_input(img_dims))
@@ -16,4 +16,4 @@ def examine_ine(image,model,cat_list):
 
 	set_result=np.concatenate([ine_sort,preds_sort],1)
 
-	return set_result[0:3,:]
+	return set_result[0:2,:]
