@@ -10,3 +10,32 @@ import pandas as pd
 
 app=Flask(__name__)
 
+model = load_model('model1.h5')
+
+ine_list=[]
+with open('ine_list.txt') as f:
+	ine_list=[s.strip()for  in f.readlines()]
+
+print('== ine_list ==')
+print(ine_list)
+
+@app.route('/',methods=['GET', 'POST'])
+def upload_file():
+	if request.method=='GET':
+		return render_template('index.html')
+
+	if request.method=="POST":
+		#uploadファイルの保存
+		f=request.files['file']
+		filepath='./static/'+datetime.now().strftime("%Y%m%d%H%M%S")+'.png'
+		f.save(filepath)
+
+		#画像の読み込みとリサイズ
+		input_img=load_img(filepath,target_size=(200,200))
+
+		#健康を調べる関数の実行
+		result = examine_ine(input_img,model,ine_list)
+		print('result')
+		print(result)
+
+		
