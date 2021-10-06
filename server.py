@@ -39,13 +39,11 @@ def upload_file():
 		print(result)
 
 		no1_ine=result[0,0]
-		no2_ine=result[0,0]
 
 		no1_ine_pred=result[0,1]
-		no2_ine_pred=result[0,1]
 
 		return render_template('index.html',filepath=filepath,
-		no1_ine=no1_ine,no2_ine=no2_ine,no1_ine_pred=no1_ine_pred,no2_ine_pred=no2_ine_pred)
+		no1_ine=no1_ine,no1_ine_pred=no1_ine_pred)
 
 if __name__=='__main__':
 	app.debug=True
