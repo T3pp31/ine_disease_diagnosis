@@ -34,7 +34,7 @@ def upload_file():
 		input_img=load_img(filepath,target_size=(200,200))
 
 		#健康を調べる関数の実行
-		result = examine_ine(input_img,model,ine_list)
+		result = examine_ine(input_img,model)
 		print('result')
 		if result ==0:
 			result='健康'

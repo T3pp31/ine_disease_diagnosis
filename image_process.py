@@ -4,7 +4,7 @@ import numpy as np
 from keras.models import load_model
 from PIL import Image
 
-def examine_ine(image,model,ine_list):
+def examine_ine(image,model):
 	imsize=(200,200)
 
 	img = Image.open(image)
