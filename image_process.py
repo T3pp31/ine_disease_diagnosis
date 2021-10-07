@@ -5,12 +5,10 @@ from keras.models import load_model
 from PIL import Image
 
 def examine_ine(image,model):
-	imsize=(200,200)
 
 	img = Image.open(image)
 	img=img.convert('RGB')
 
-	img=img.resize(imsize)
 
 	img = np.asarray(img)
 	img=img/255.0
