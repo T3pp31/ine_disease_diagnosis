@@ -27,6 +27,7 @@ def upload_file():
 
 		#健康を調べる関数の実行
 		result = examine_ine(filepath)
+		print(result)
 		print('result')
 		if result ==0:
 			result='健康'
