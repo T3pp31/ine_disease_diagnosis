@@ -36,14 +36,15 @@ def upload_file():
 		#健康を調べる関数の実行
 		result = examine_ine(input_img,model,ine_list)
 		print('result')
+		if result ==0:
+			result='健康'
+		else:
+			result='不健康'
 		print(result)
 
-		no1_ine=result[0,0]
-
-		no1_ine_pred=result[0,1]
 
 		return render_template('index.html',filepath=filepath,
-		no1_ine=no1_ine,no1_ine_pred=no1_ine_pred)
+		result=result)
 
 if __name__=='__main__':
 	app.debug=True
