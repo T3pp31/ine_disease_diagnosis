@@ -7,7 +7,8 @@ Classificationで分類機を作成．
 
 # 使い方
 こちらのリポジトリにはmodel1.h5が含まれていないので，それをダウンロード，もしくはclassification.ipynbを用いて，それを作成する必要があります．
-
+<img width="562" alt="f50530b5a311f0b0b27fe5bdc62ab863" src="https://user-images.githubusercontent.com/37261985/136337457-df4bfc25-ee4e-4e08-b193-c735a95aacd8.png">
 
 # 参考サイト
+
 https://qiita.com/3BMKATYWKA/items/52d1c838eb34133042a3
