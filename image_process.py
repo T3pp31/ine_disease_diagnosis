@@ -3,7 +3,7 @@ import sys,os
 import numpy as np
 from keras.models import load_model
 from PIL import Image
-import cv2
+
 def examine_ine(image,model,ine_list):
 	imsize=(200,200)
 
