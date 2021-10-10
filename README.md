@@ -5,12 +5,17 @@
 今回は，利用したデータセットが稲が健康か健康でないかで写真を分けてあったので，教師あり学習を用いて学習させた，
 Classificationで分類機を作成．
 
+
+
 # 使い方
 こちらのリポジトリにはmodel1.h5が含まれていないので，それをダウンロード，もしくはclassification.ipynbを用いて，それを作成する必要があります．
 
 modelは[こちらから](https://drive.google.com/file/d/1NeQAlBGmod3o64BMRRcABiVawiew9kBT/view?usp=sharing)
 <img width="562" alt="f50530b5a311f0b0b27fe5bdc62ab863" src="https://user-images.githubusercontent.com/37261985/136337457-df4bfc25-ee4e-4e08-b193-c735a95aacd8.png">
 
+
+# 問題点
+今のところまだどの画像をいれても健康と表示される．モデルとしっかりと連携させる必要がある．
 # 参考サイト
 
 https://qiita.com/3BMKATYWKA/items/52d1c838eb34133042a3
