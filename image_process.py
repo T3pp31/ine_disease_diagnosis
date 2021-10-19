@@ -20,13 +20,12 @@ def examine_ine(image):
 # 予測結果の出力
 	prd = model.predict(np.array([img]))
 	print(prd)
-	prelabel = np.argmax(prd, axis=1)
+
+
+	prelabel = np.argmax(prd)
 	print(prelabel)
 
-	if prelabel == 0:
-		print(">>> healthy")
-	elif prelabel == 1:
-		print(">>> unhealthy")
+
 
 	return prd
 
