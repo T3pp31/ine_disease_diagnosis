@@ -20,9 +20,7 @@ def examine_ine(image):
 # 予測結果の出力
 	prd = model.predict(np.array([img]))
 	print(prd)
-
-	prelabel = np.argmax(prd)
-	print(prelabel)
+	
 
 
 
