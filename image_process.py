@@ -26,5 +26,5 @@ def examine_ine(image):
 	elif prelabel == 1:
 		print(">>> unhealthy")
 
-	return prelabel
+	return prd
 

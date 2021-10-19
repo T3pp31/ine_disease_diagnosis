@@ -29,11 +29,7 @@ def upload_file():
 		result = examine_ine(filepath)
 		print(result)
 		print('result')
-		if result ==0:
-			result='健康'
-		else:
-			result='不健康'
-		print(result)
+
 
 
 		return render_template('index.html',filepath=filepath,
