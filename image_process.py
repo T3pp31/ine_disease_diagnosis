@@ -21,7 +21,6 @@ def examine_ine(image):
 	prd = model.predict(np.array([img]))
 	print(prd)
 
-
 	prelabel = np.argmax(prd)
 	print(prelabel)
 
