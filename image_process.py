@@ -16,10 +16,10 @@ def examine_ine(image):
 
 	model = load_model('model1.h5')
 	model.load_weights('model1.h5')
-
 	prd = model.predict(np.array([img]))
 	print(prd)
 	prelabel = np.argmax(prd, axis=1)
+	print(prelabel)
 
 	if prelabel == 0:
 		print(">>> healthy")
