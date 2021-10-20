@@ -11,7 +11,7 @@ def examine_ine(image):
 
 	img=Image.open(image)
 	img=img.convert('RGB')
-	img=img.resize(imsize)
+	#img=img.resize(imsize)
 
 
 	img = np.asarray(img)
