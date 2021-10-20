@@ -19,8 +19,11 @@ def examine_ine(image):
 	model.load_weights('model1.h5')
 # 予測結果の出力
 	prd = model.predict(np.array([img]))
+	prelabel=np.argmax(prd)
 	print(prd)
-	
+	print(prelabel)
+
+
 
 
 
