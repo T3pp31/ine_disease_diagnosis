@@ -7,9 +7,6 @@ from PIL import Image
 
 imsize=(200,200)
 def examine_ine(image):
-
-	classes=['healthy','unhealthy']
-
 	imsize=(200,200)
 
 	img=Image.open(image)
@@ -25,9 +22,8 @@ def examine_ine(image):
 	model.load_weights('model1.h5')
 # 予測結果の出力
 	prd = model.predict(np.array([img]))
-	prelabel=int(np.argmax(prd,axis=1))
-
-	species=classes[prelabel]
+	prelabel=class_names[int(round[mem[0]])]
+	
 
 	print('prd',prd)
 	print('prelabel',prelabel)
@@ -36,5 +32,4 @@ def examine_ine(image):
 
 
 
-	return species
-
+	return prd[0]*100
