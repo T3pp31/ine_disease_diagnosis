@@ -2,9 +2,10 @@
 <html>
 
 <body>
+	<h1>稲の健康状態検査</h1>
     {% if result %}
     <img src="{{filepath}}" border='1' width='200' height='200'><br> 予想結果
-    <br> {{result}}
+    <br> 病気がある確率:{{result}}
     <br>
     <hr> {% endif %} ファイルを選択して送信してください
     <br>

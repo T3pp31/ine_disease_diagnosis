@@ -18,16 +18,16 @@ def examine_ine(image):
 
 
 	img = np.asarray(img)
-	img=img/255.0
 
 # モデルの読み込み，重み付け
 	model = load_model('model1.h5')
-	model.load_weights('model1.h5')
 # 予測結果の出力
 	prd = model.predict(np.array([img]))
-	prelabel=int(np.argmax(prd,axis=1))
+	prelabel=np.argmax(prd)
+	print('prelabel',prelabel)
+	prelabel=classes[prelabel]
 
-	species=classes[prelabel]
+	
 
 	print('prd',prd)
 	print('prelabel',prelabel)
@@ -36,5 +36,5 @@ def examine_ine(image):
 
 
 
-	return species
+	return prd*100
 
