@@ -3,9 +3,11 @@
 
 <body>
 	<h1>稲の健康状態検査</h1>
+	<h2>稲の穂で判断します．</h2>
     {% if result %}
     <img src="{{filepath}}" border='1' width='200' height='200'><br> 予想結果
     <br> 病気がある確率:{{result}}
+	<br> 健康尺度:{{rice_status}}
     <br>
     <hr> {% endif %} ファイルを選択して送信してください
     <br>

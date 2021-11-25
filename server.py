@@ -27,13 +27,23 @@ def upload_file():
 
 		#健康を調べる関数の実行
 		result = examine_ine(filepath)
+
+		if result>75:
+			rice_status='病気の可能性高'
+		elif result>50:
+			rice_status='病気の可能性有り'
+		elif result>30:
+			rice_status='病気の可能性低'
+		else:
+			rice_status='健康'
+
 		print(result)
 		print('result')
 
 
 
 		return render_template('index.html',filepath=filepath,
-		result=result)
+		result=result,rice_status=rice_status)
 
 if __name__=='__main__':
 	app.debug=True
