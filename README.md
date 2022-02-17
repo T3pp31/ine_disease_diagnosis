@@ -14,8 +14,6 @@ modelは[こちらから](https://drive.google.com/file/d/1NeQAlBGmod3o64BMRRcAB
 <img width="562" alt="f50530b5a311f0b0b27fe5bdc62ab863" src="https://user-images.githubusercontent.com/37261985/136337457-df4bfc25-ee4e-4e08-b193-c735a95aacd8.png">
 
 
-# 問題点
-今のところまだどの画像をいれても健康と表示される．モデルとしっかりと連携させる必要がある．(解決済み)
 
 # 数値について
 しっかりと正答率が出るようになっている．数値が高ければ高いほど病気がある可能性が高い．
