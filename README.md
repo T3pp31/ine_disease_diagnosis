@@ -25,8 +25,21 @@ dilution_img:画像を増やすために使います（データが少ない時�
 classification.ipynb:分類器を作るのに使います
 
 # 使い方
-必要なライブラリ等をpipコマンドで導入し，
-```python3 server.py```で利用できます
+Dockerを用意してあるので，そちらを用いて利用するようにしてください．
+```
+$ cd docker_file
+$ docker build . -t ine_disease_diagnosis
+$ docker run -p 5000:5000 ine_disease_diagnosis
+$ docker container exec -it コンテナ名 bash
+$ git clone https://github.com/Fu-Te/ine_disease_diagnosis.git
+```
+本リポジトリにはmodel.h5が含まれていないので，使い方のところにあるリンクからダウンロードし，フォルダに追加してください．
+その後
+```
+$ python3 server.py
+```
+を実行し，localhost:5000にアクセスしてみてください．
+
 
 # 参考サイト
 

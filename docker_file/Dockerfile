@@ -16,6 +16,7 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN git clone https://github.com/Fu-Te/ine_disease_diagnosis.git
 RUN pip install tensorflow -f https://tf.kmtea.eu/whl/stable.html
-RUN pip install flask keras pillow numpy pandas opencv-python matplotlib scikit-learn seaborn scipy
+RUN python -m pip install  flask pillow numpy pandas opencv-python matplotlib scikit-learn seaborn scipy
+RUN python -m pip install  keras
 
 EXPOSE 5000
